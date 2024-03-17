@@ -1,5 +1,6 @@
-import { Logo } from "../Logo";
-import { FooterContainer } from "./styles";
+import { ContactIcons } from "@/shared/ContactIcons";
+import { Logo } from "@/shared/Logo";
+import { FooterContainer, List } from "./styles";
 
 export const Footer = () => {
   const data = [
@@ -16,12 +17,9 @@ export const Footer = () => {
       { title: "Отзывы", link: "#" },
       { title: "Статьи", link: "#" },
       { title: "Контакты", link: "#" },
-      { title: "Защита персональных данных", link: "#" },
+      { title: "Разработка сайта", link: "#" },
     ],
   ];
-  //     < ul >
-  //     <li>{text}</li>
-  // </ul >
 
   return (
     <FooterContainer>
@@ -32,6 +30,23 @@ export const Footer = () => {
         <p>ИНН 2342342342343</p>
         <p>ОГРИНП 21324698</p>
       </div>
+      {data.map((section, index) => (
+        <List key={index}>
+          {section.map((text) => (
+            <li key={text}>{text}</li>
+          ))}
+        </List>
+      ))}
+      {links.map((section, index) => (
+        <List key={index}>
+          {section.map(({ link, title }) => (
+            <li key={title}>
+              <a href={link}>{title}</a>
+            </li>
+          ))}
+        </List>
+      ))}
+      <ContactIcons />
     </FooterContainer>
   );
 };

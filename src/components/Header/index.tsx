@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { NAV_LINKS } from "../../constants";
 import { Contacts, HeaderContainer, ContactsText, Icons } from "./styles";
 import { Nav } from "../Nav";
-import { Logo } from "../Logo";
-import { ColoredCircleIcon } from "../../shared/ColoredCircleIcon";
-import telegramIcon from "../../assets/icons/telegram.svg";
-import phoneIcon from "../../assets/icons/phone.svg";
+import { ContactIcons } from "@/shared/ContactIcons";
+import { Logo } from "@/shared/Logo";
 
 export const Header = () => {
   return (
@@ -13,10 +11,7 @@ export const Header = () => {
       <Logo />
       <Nav />
       <Contacts>
-        <Icons>
-          <ColoredCircleIcon src={telegramIcon} />
-          <ColoredCircleIcon src={phoneIcon} />
-        </Icons>
+        <ContactIcons />
         <ContactsText>
           <Link to="tel:183289313123" className="link">
             8 029 322 15 86

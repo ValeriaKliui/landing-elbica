@@ -19,7 +19,3 @@ export const ContactsText = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-export const Icons = styled.div`
-  display: flex;
-  gap: 1em;
-`;
