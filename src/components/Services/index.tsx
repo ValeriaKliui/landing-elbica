@@ -1,13 +1,14 @@
-import { SERVICES } from "@/constants/services";
+import { SERVICES } from "@/constants";
+
 import { ServiceCard } from "./ServiceCard";
 import { ServicesContainer } from "./styles";
 
 export const Services = () => (
-  <section>
-    <h2 className="centered-text">Кaталог услуг</h2>
+  <section className={["section", "wrapper"].join(" ")}>
+    <h2 className="section-title">Каталог услуг</h2>
     <ServicesContainer>
       {SERVICES.map(({ title, text }) => (
-        <ServiceCard title={title} text={text} />
+        <ServiceCard title={title} text={text} key={title} />
       ))}
     </ServicesContainer>
   </section>

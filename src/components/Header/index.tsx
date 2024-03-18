@@ -1,22 +1,26 @@
 import { Link } from "react-router-dom";
-import { NAV_LINKS } from "../../constants";
-import { Contacts, HeaderContainer, ContactsText, Icons } from "./styles";
-import { Nav } from "../Nav";
+
+import { CONTACT_PHONE } from "@/constants";
 import { ContactIcons } from "@/shared/ContactIcons";
 import { Logo } from "@/shared/Logo";
 
+import { Nav } from "../Nav";
+import { Contacts, ContactsText, HeaderContainer } from "./styles";
+
 export const Header = () => {
   return (
-    <HeaderContainer>
+    <HeaderContainer className="wrapper">
       <Logo />
       <Nav />
       <Contacts>
         <ContactIcons />
         <ContactsText>
-          <Link to="tel:183289313123" className="link">
-            8 029 322 15 86
+          <Link to={`tel:${CONTACT_PHONE}`} className="link">
+            {CONTACT_PHONE.toLocaleString()}
           </Link>
-          <p className="bold">Заказать звонок</p>
+          <Link className="bold" to={`tel:${CONTACT_PHONE}`}>
+            Заказать звонок
+          </Link>
         </ContactsText>
       </Contacts>
     </HeaderContainer>

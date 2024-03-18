@@ -9,7 +9,7 @@ export const Container = styled.div`
   gap: 0.5em;
   &:hover {
     box-shadow: none;
-    border: 1px solid #c1a875;
+    border: 1px solid ${(props) => props.theme.colors.secondary};
   }
 `;
 export const Link = styled.a`

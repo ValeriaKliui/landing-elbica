@@ -1,7 +1,7 @@
-import { createGlobalStyle } from "styled-components";
-import CirceWoff from "@assets/fonts/Circe-Regular.woff";
 import CirceEot from "@assets/fonts/Circe-Regular.eot";
 import CirceTtf from "@assets/fonts/Circe-Regular.ttf";
+import CirceWoff from "@assets/fonts/Circe-Regular.woff";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body,
-  a, button {
+  button {
     font-family: "Circe", serif;
     font-style: normal;
     font-size: 18px;
@@ -22,6 +22,9 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+    &:hover {
+      color: ${(props) => props.theme.colors.secondary};
+    }
   }
 
   li {
@@ -34,19 +37,23 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .link {
-    color: #55aca6;
+    color: ${(props) => props.theme.colors.primary};
     font-weight: 700;
-  }
+   }
 
   .bold {
     font-weight: 700;
   }
 
   #root {
-    max-width: 1300px;
     margin: 0 auto;
   }
-  h1, h2, h3, h4, h5, h6 {
+  .wrapper {
+    max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  h2, h3, h4, h5, h6 {
     font-family: "Cormorant", serif;
     font-style: normal;
   }
@@ -54,10 +61,18 @@ export const GlobalStyle = createGlobalStyle`
     text-transform: uppercase;
 font-size: 2.5em;
   }
+  h3 {
+    font-size: 2em;
+  }
   h4 {
     font-size: 1.5em;
   }
-  .centered-text {
-    text-align:center
+  .section {
+    padding: 3em 0;
+    margin-bottom: 1em;
+  }
+  .section-title {
+    text-align:center;
+    margin-bottom: 1em;
   }
 `;

@@ -1,6 +1,7 @@
-import { Header } from "@components/Header";
 import { Route, Routes } from "react-router-dom";
+
 import { Layout } from "@/shared/Layout";
+
 import { MainPage } from "./pages/MainPage";
 
 function App() {

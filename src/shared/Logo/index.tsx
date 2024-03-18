@@ -1,10 +1,10 @@
-import { LogoContainer, LogoText } from "./styles";
+import { LogoContainer, LogoText, Subtext } from "./styles";
 
 export const Logo = () => {
   return (
     <LogoContainer>
       <LogoText>Эльбика</LogoText>
-      <p>бухгалтерское бюро</p>
+      <Subtext>бухгалтерское бюро</Subtext>
     </LogoContainer>
   );
 };

@@ -1,5 +1,6 @@
 import { ContactIcons } from "@/shared/ContactIcons";
 import { Logo } from "@/shared/Logo";
+
 import { FooterContainer, List } from "./styles";
 
 export const Footer = () => {
@@ -22,7 +23,7 @@ export const Footer = () => {
   ];
 
   return (
-    <FooterContainer>
+    <FooterContainer className="wrapper">
       <div>
         <Logo />
         <p>© 2024 Все права защищены</p>
