@@ -23,7 +23,7 @@ export const DecoratedImg: FC<DecoratedImgProps> = ({
   }, [imgRef]);
 
   return (
-    <Container>
+    <Container className="decorated-img" $top={imgTop}>
       <Border
         $top={imgTop}
         $imgHeight={imgHeight}

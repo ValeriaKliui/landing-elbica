@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{ $top: number }>`
   position: relative;
   top: 2em;
   width: 500px;
   height: 400px;
-  margin-bottom: 8em;
+  margin-bottom: ${({ $top }) => $top}px;
 `;
 export const Border = styled.div<{
   $top: number;

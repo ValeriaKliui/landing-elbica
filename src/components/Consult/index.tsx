@@ -1,4 +1,5 @@
 import Girl from "@assets/images/girl-writes.png";
+import classNames from "classnames";
 import { Link } from "react-router-dom";
 
 import { Button } from "@/shared/Button";
@@ -8,7 +9,7 @@ import { Container, Links, SectionTitle, Text } from "./styled";
 
 export const Consult = () => {
   return (
-    <section className={["section", "wrapper"].join(" ")}>
+    <section className={classNames("section", "wrapper")}>
       <Links>
         <Link to="#">Главная</Link>
         <Link to="#">Услуги</Link>

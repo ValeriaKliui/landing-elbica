@@ -1,5 +1,5 @@
-import phoneIcon from "@assets/icons/phone.svg";
-import telegramIcon from "@assets/icons/telegram.svg";
+import PhoneIcon from "@assets/icons/phone.svg?react";
+import TelegramIcon from "@assets/icons/telegram.svg?react";
 
 import { CONTACT_PHONE } from "@/constants";
 
@@ -9,8 +9,8 @@ import { Icons } from "./styles";
 export const ContactIcons = () => {
   return (
     <Icons>
-      <ColoredCircleIcon src={telegramIcon} link={`tel:${CONTACT_PHONE}`} />
-      <ColoredCircleIcon src={phoneIcon} link={`tel:${CONTACT_PHONE}`} />
+      <ColoredCircleIcon Icon={TelegramIcon} link={`tel:${CONTACT_PHONE}`} />
+      <ColoredCircleIcon Icon={PhoneIcon} link={`tel:${CONTACT_PHONE}`} />
     </Icons>
   );
 };

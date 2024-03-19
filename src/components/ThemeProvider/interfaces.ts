@@ -4,6 +4,7 @@ export type BaseTheme = {
     secondary: string;
     primary_light: string;
     yellow: string;
+    white: string;
   };
 };
 

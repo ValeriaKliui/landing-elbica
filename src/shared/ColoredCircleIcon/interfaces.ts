@@ -1,4 +1,6 @@
+import { SVG } from "@/types";
+
 export interface ColoredCircleIconProps {
-  src: string;
+  Icon: SVG;
   link: string;
 }

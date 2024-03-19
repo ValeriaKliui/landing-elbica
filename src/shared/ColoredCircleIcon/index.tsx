@@ -2,17 +2,17 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 
 import { ColoredCircleIconProps } from "./interfaces";
-import { Circle, CircleIcon, IconContainer } from "./styles";
+import { Circle, IconContainer } from "./styles";
 
 export const ColoredCircleIcon: FC<ColoredCircleIconProps> = ({
-  src,
+  Icon,
   link,
 }) => {
   return (
     <Link to={link}>
       <Circle>
         <IconContainer>
-          <CircleIcon src={src} />
+          <Icon />
         </IconContainer>
       </Circle>
     </Link>

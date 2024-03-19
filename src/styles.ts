@@ -13,10 +13,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body,
-  button {
+  button, ::placeholder {
     font-family: "Circe", serif;
     font-style: normal;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   a {
@@ -49,7 +49,12 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
   }
   .wrapper {
-    max-width: 1300px;
+    max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .wrapper-s {
+    max-width: 1060px;
   margin-left: auto;
   margin-right: auto;
   }
@@ -74,5 +79,8 @@ font-size: 2.5em;
   .section-title {
     text-align:center;
     margin-bottom: 1em;
+  }
+  .subtext {
+    font-size: .8em;
   }
 `;

@@ -6,4 +6,5 @@ export const ButtonStyled = styled.button`
   border: none;
   color: white;
   align-self: flex-start;
+  cursor: pointer;
 `;

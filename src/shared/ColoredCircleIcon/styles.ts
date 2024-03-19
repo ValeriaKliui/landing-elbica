@@ -12,6 +12,3 @@ export const IconContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const CircleIcon = styled.img`
-  width: 100%;
-`;

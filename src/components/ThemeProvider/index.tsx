@@ -8,6 +8,7 @@ const themeLight: BaseTheme = {
     secondary: "#C1A875",
     primary_light: "#AAD6D3",
     yellow: "#FFFCF5",
+    white: "#ffffff",
   },
 };
 
