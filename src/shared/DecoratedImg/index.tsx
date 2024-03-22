@@ -11,8 +11,8 @@ export const DecoratedImg: FC<DecoratedImgProps> = ({
   const [imgHeight, setImgHeight] = useState(0);
   const [imgWidth, setImgWidth] = useState(0);
 
-  const imgTop = imgHeight / 7;
-  const imgLeft = imgWidth / 8;
+  const imgTop = imgHeight / 8;
+  const imgLeft = imgWidth / 12;
 
   useEffect(() => {
     const rect = imgRef && imgRef.current;
@@ -23,20 +23,16 @@ export const DecoratedImg: FC<DecoratedImgProps> = ({
   }, [imgRef]);
 
   return (
-    <Container className="decorated-img" $top={imgTop}>
-      <Border
-        $top={imgTop}
-        $imgHeight={imgHeight}
-        $isCascade={isCascade}
-        $left={imgLeft}
-      />
-      <Image
-        src={src}
-        ref={imgRef}
-        $top={imgTop}
-        $left={imgLeft}
-        $isCascade={isCascade}
-      />
+    <Container $top={imgTop} $left={imgLeft}>
+      <Border $top={imgTop}>
+        <Image
+          src={src}
+          ref={imgRef}
+          $left={imgLeft}
+          $top={imgTop}
+          $isCascade={isCascade}
+        />
+      </Border>
     </Container>
   );
 };

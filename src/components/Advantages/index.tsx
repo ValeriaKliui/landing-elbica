@@ -9,6 +9,7 @@ import {
   IconContainer,
   ImageContainer,
   Item,
+  ItemText,
   Section,
 } from "./styled";
 
@@ -24,10 +25,10 @@ export const Advantages = () => {
                 <IconContainer>
                   <Icon />
                 </IconContainer>
-                <div>
+                <ItemText>
                   <h4> {title}</h4>
                   <p>{text}</p>
-                </div>
+                </ItemText>
               </Item>
             ))}
           </AdvantagesList>

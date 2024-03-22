@@ -1,8 +1,10 @@
 import { ThemeProvider } from "styled-components";
 
+import { devices } from "@/constants";
+
 import { BaseTheme, ThemeProps } from "./interfaces";
 
-const themeLight: BaseTheme = {
+const baseTheme: BaseTheme = {
   colors: {
     primary: "#55ACA6",
     secondary: "#C1A875",
@@ -10,8 +12,14 @@ const themeLight: BaseTheme = {
     yellow: "#FFFCF5",
     white: "#ffffff",
   },
+  deviceQueries: {
+    lg: `(max-width: ${devices.lg}px)`,
+    md: `(max-width: ${devices.md}px)`,
+    sm: `(max-width: ${devices.sm}px)`,
+    xs: `(max-width: ${devices.xs}px)`,
+  },
 };
 
 export const Theme = ({ children }: ThemeProps) => {
-  return <ThemeProvider theme={themeLight}>{children}</ThemeProvider>;
+  return <ThemeProvider theme={baseTheme}>{children}</ThemeProvider>;
 };

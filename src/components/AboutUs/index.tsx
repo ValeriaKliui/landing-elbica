@@ -7,7 +7,7 @@ import { DecoratedImg } from "@/shared/DecoratedImg";
 
 import { Container, Links, SectionTitle, Text } from "./styled";
 
-export const Consult = () => {
+export const AboutUs = () => {
   return (
     <section className={classNames("section", "wrapper")}>
       <Links>

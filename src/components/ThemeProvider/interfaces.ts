@@ -6,6 +6,12 @@ export type BaseTheme = {
     yellow: string;
     white: string;
   };
+  deviceQueries: {
+    lg: string;
+    md: string;
+    sm: string;
+    xs: string;
+  };
 };
 
 export type ThemeProps = {

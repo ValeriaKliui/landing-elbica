@@ -6,24 +6,21 @@ export const Section = styled.section`
 export const Container = styled.div`
   padding: 0 4em;
   display: flex;
-  gap: 3.5em;
   justify-content: space-between;
   align-items: center;
-  @media ${({ theme: { deviceQueries } }) => deviceQueries.md} {
-    padding: 0 2em;
-  }
-
+  flex-direction: column;
+  gap: 1.5em;
   @media ${({ theme: { deviceQueries } }) => deviceQueries.sm} {
-    width: unset;
-    gap: 0.5em;
-  }
-  @media ${({ theme: { deviceQueries } }) => deviceQueries.xs} {
-    flex-direction: column;
-    padding: 0 1em;
+    padding: 0 0.4em;
   }
 `;
-export const Text = styled.div`
+export const Image = styled.img`
+  max-width: 50%;
+  object-fit: cover;
+  @media ${({ theme: { deviceQueries } }) => deviceQueries.sm} {
+    display: none;
+  }
+`;
+export const FormContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 1em;
 `;

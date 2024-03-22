@@ -3,12 +3,19 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 2em;
+  @media ${({ theme: { deviceQueries } }) => deviceQueries.md} {
+    flex-direction: column-reverse;
+    padding-top: 2em;
+    align-items: center;
+  }
 `;
 export const Text = styled.div`
-  flex-basis: 48%;
+  flex-basis: 18%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 2em;
 `;
 export const SectionTitle = styled.h2`
   &::after {
@@ -32,6 +39,7 @@ export const Links = styled.div`
     margin: 0 1em;
     position: relative;
     top: 5px;
+    z-index: 0;
   }
   a:last-child::after {
     display: none;

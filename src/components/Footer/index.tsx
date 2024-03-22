@@ -1,45 +1,36 @@
+import { FOOTER_DATA, FOOTER_LINKS } from "@/constants";
 import { ContactIcons } from "@/shared/ContactIcons";
 import { Logo } from "@/shared/Logo";
 
-import { FooterContainer, List } from "./styles";
+import {
+  CompanyData,
+  CompanyInfo,
+  FooterContainer,
+  IconsWrapper,
+  List,
+} from "./styles";
 
 export const Footer = () => {
-  const data = [
-    ["12313, г. Минск, ул. Плотникова 9", "803349382423", "fgjkfg@gmaul.com"],
-  ];
-  const links = [
-    [
-      { title: "О компании", link: "#" },
-      { title: "Услуги", link: "#" },
-      { title: "Команда", link: "#" },
-      { title: "Защита персональных данных", link: "#" },
-    ],
-    [
-      { title: "Отзывы", link: "#" },
-      { title: "Статьи", link: "#" },
-      { title: "Контакты", link: "#" },
-      { title: "Разработка сайта", link: "#" },
-    ],
-  ];
-
   return (
     <FooterContainer className="wrapper">
-      <div>
+      <CompanyData>
         <Logo />
-        <p>© 2024 Все права защищены</p>
-        <p>ИП Тимофеева Вера Леонидовна</p>
-        <p>ИНН 2342342342343</p>
-        <p>ОГРИНП 21324698</p>
-      </div>
-      {data.map((section, index) => (
-        <List key={index}>
+        <CompanyInfo>
+          <p>© 2024 Все права защищены</p>
+          <p>ИП Тимофеева Вера Леонидовна</p>
+          <p>ИНН 2342342342343</p>
+          <p>ОГРИНП 21324698</p>
+        </CompanyInfo>
+      </CompanyData>
+      {FOOTER_DATA.map((section, index) => (
+        <List key={index} $index={index}>
           {section.map((text) => (
             <li key={text}>{text}</li>
           ))}
         </List>
       ))}
-      {links.map((section, index) => (
-        <List key={index}>
+      {FOOTER_LINKS.map((section, index) => (
+        <List key={index} $index={index}>
           {section.map(({ link, title }) => (
             <li key={title}>
               <a href={link}>{title}</a>
@@ -47,7 +38,9 @@ export const Footer = () => {
           ))}
         </List>
       ))}
-      <ContactIcons />
+      <IconsWrapper>
+        <ContactIcons />
+      </IconsWrapper>
     </FooterContainer>
   );
 };

@@ -6,4 +6,8 @@ export const NavList = styled.ul`
   width: 100%;
   justify-content: space-between;
   gap: 1em;
+  @media ${({ theme: { deviceQueries } }) => deviceQueries.md} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
