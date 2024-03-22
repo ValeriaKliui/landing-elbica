@@ -6,6 +6,7 @@ export const FooterContainer = styled.footer`
   justify-items: center;
   border-top: 1px solid ${({ theme: { colors } }) => colors.secondary};
   padding: 2em 0;
+  width: 100%;
 
   @media ${({ theme: { deviceQueries } }) => deviceQueries.md} {
     grid-template-areas:

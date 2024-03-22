@@ -8,6 +8,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   border-bottom: 1px solid ${({ theme: { colors } }) => colors.secondary};
   padding: 1em 0;
+  width: 100%;
 `;
 export const Contacts = styled.div<{ $isOpened: boolean }>`
   display: flex;

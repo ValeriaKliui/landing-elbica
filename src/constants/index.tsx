@@ -11,6 +11,15 @@ import GirlReadsImg from "@assets/images/girl-reads.png";
 import LaptopImg from "@assets/images/laptop.png";
 import PapersImg from "@assets/images/papers.png";
 
+export const colors = {
+  primary: "#55ACA6",
+  secondary: "#C1A875",
+  primary_dark: "#39736f",
+  primary_light: "#AAD6D3",
+  yellow: "#FFFCF5",
+  white: "#ffffff",
+};
+
 export const devices = {
   lg: 1199,
   md: 991,
@@ -37,12 +46,11 @@ export enum LINKS {
 }
 
 export const NAV_LINKS = [
-  { link: "#" + LINKS.COMPANY, title: "О компании" },
+  { link: PATHS.MAIN.LINK + "#" + LINKS.COMPANY, title: "О компании" },
   { link: PATHS.SERVICES.LINK, title: "Услуги" },
-  { link: "#" + LINKS.BENEFITS, title: "Преимущества" },
-  { link: "#" + LINKS.OPPORTUNITIES, title: "Возможности" },
-  { link: "#" + LINKS.FAQ, title: "Вопросы" },
-  { link: "#" + LINKS.CONTACTS, title: "Контакты" },
+  { link: PATHS.MAIN.LINK + "#" + LINKS.BENEFITS, title: "Преимущества" },
+  { link: PATHS.MAIN.LINK + "#" + LINKS.FAQ, title: "Вопросы" },
+  { link: PATHS.MAIN.LINK + "#" + LINKS.CONTACTS, title: "Контакты" },
 ];
 export const CONTACT_PHONE = 80293221586;
 
@@ -155,10 +163,10 @@ export const FAQItems = [
 
 export const FOOTER_LINKS = [
   [
-    { link: "#" + LINKS.COMPANY, title: "О компании" },
+    { link: PATHS.MAIN.LINK + "#" + LINKS.COMPANY, title: "О компании" },
     { link: PATHS.SERVICES.LINK, title: "Услуги" },
-    { link: "#" + LINKS.BENEFITS, title: "Преимущества" },
-    { link: "#" + LINKS.OPPORTUNITIES, title: "Возможности" },
+    { link: PATHS.MAIN.LINK + "#" + LINKS.BENEFITS, title: "Преимущества" },
+    { link: PATHS.MAIN.LINK + "#" + LINKS.OPPORTUNITIES, title: "Возможности" },
   ],
   [
     { title: "Отзывы", link: "#" },
@@ -176,4 +184,59 @@ export const FOOTER_DATA = [
     "803349382423",
     "fgjkfg@gmaul.com",
   ],
+];
+
+export const TARIFFS = [
+  {
+    title: "Тариф «Лайт»",
+    items: [
+      "Формирование учетной политики",
+      "Постановка на учет, амортизация, выбытие основных средств и нематериальных активов",
+      "Списание материалов в эксплуатацию по заявке Заказчика",
+      "Оформление в 1С корректировок поступлений и реализаций",
+      "Оформление в 1С плановых и внеплановых инвентаризаций товаров и расчетов",
+      "Начисление процентов по договорам кредитов и займов",
+      "Начисление и выплата заработной платы и других видов доходов",
+    ],
+    color: colors.secondary,
+    price: 15000,
+  },
+  {
+    title: "Тариф «Бизнес»",
+    items: [
+      "Формирование учетной политики",
+      "Оприходование первичной учетной документации по закупкам материалов и услуг",
+      "Формирование счетов и актов на оказанные услуги",
+      "Ежеквартальная сверка с ФНС для актуализации баланса ЕНС в учетной программе",
+      "Оформление в 1С корректировок поступлений и реализаций",
+      "Оформление в 1С плановых и внеплановых инвентаризаций товаров и расчетов",
+      "Начисление процентов по договорам кредитов и займов",
+      "Начисление и выплата заработной платы и других видов доходов",
+      "Подготовка платежных поручений на все необходимые налоги и сборы",
+      "Подготовка комплекта отчетности по заработной плате и кадрам",
+    ],
+    color: colors.primary,
+    price: 25000,
+  },
+];
+
+export const BENEFITS_OOO = [
+  {
+    title: "Организация и ведение бухучета",
+    text: "Проснувшись однажды утром после беспокойного сна, он обнаружил, что он у себя в постели превратился в страшное насекомое.",
+    link: "#",
+    Icon: MaintenanceImg,
+  },
+  {
+    title: "Кадровое сопровождение",
+    text: "Проснувшись однажды утром после беспокойного сна, он обнаружил, что он у себя в постели превратился в страшное насекомое.",
+    link: "#",
+    Icon: RecreationImg,
+  },
+  {
+    title: "Составление отчетности",
+    text: "Проснувшись однажды утром после беспокойного сна, он обнаружил, что он у себя в постели превратился в страшное насекомое.",
+    link: "#",
+    Icon: RegistrationImg,
+  },
 ];

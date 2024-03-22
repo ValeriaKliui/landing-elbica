@@ -6,11 +6,9 @@ import { CONTACT_PHONE } from "@/constants";
 import { ColoredCircleIcon } from "../ColoredCircleIcon";
 import { Icons } from "./styles";
 
-export const ContactIcons = () => {
-  return (
-    <Icons>
-      <ColoredCircleIcon Icon={TelegramIcon} link={`tel:${CONTACT_PHONE}`} />
-      <ColoredCircleIcon Icon={PhoneIcon} link={`tel:${CONTACT_PHONE}`} />
-    </Icons>
-  );
-};
+export const ContactIcons = () => (
+  <Icons>
+    <ColoredCircleIcon Icon={TelegramIcon} link={`tel:${CONTACT_PHONE}`} />
+    <ColoredCircleIcon Icon={PhoneIcon} link={`tel:${CONTACT_PHONE}`} />
+  </Icons>
+);

@@ -3,12 +3,14 @@ import { Outlet } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
-export const Layout = () => {
-  return (
-    <>
-      <Header />
+import { Wrapper } from "./styled";
+
+export const Layout = () => (
+  <>
+    <Header />
+    <Wrapper>
       <Outlet />
-      <Footer />
-    </>
-  );
-};
+    </Wrapper>
+    <Footer />
+  </>
+);

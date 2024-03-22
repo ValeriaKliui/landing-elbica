@@ -73,6 +73,9 @@ export const GlobalStyle = styled.createGlobalStyle`
 
   #root {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   .wrapper {
     max-width: 1350px;
@@ -137,5 +140,9 @@ export const GlobalStyle = styled.createGlobalStyle`
   }
   .centered-text {
     text-align: center;
+  }
+  .action-text {
+    font-family: "Circe", serif;
+    font-size: 1.5em;
   }
 `;

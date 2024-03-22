@@ -1,14 +1,19 @@
-import Girl from "@assets/images/girl-writes.png";
 import classNames from "classnames";
+import { FC } from "react";
 import { NavLink } from "react-router-dom";
 
 import { LINKS, PATHS } from "@/constants";
 import { Button } from "@/shared/Button";
 import { DecoratedImg } from "@/shared/DecoratedImg";
 
+import { OpeningBlockProps } from "./interfaces";
 import { Container, Links, SectionTitle, Text } from "./styled";
 
-export const AboutUs = () => {
+export const OpeningBlock: FC<OpeningBlockProps> = ({
+  blockTitle,
+  blockText,
+  blockImgSrc,
+}) => {
   const paths = Object.entries(PATHS).map((path) => path[1]);
 
   return (
@@ -25,16 +30,10 @@ export const AboutUs = () => {
         ))}
       </Links>
       <Container>
-        <DecoratedImg src={Girl} />
+        <DecoratedImg src={blockImgSrc} />
         <Text>
-          <SectionTitle>Бухгалтерские услуги для вашего бизнеса</SectionTitle>
-          <p>
-            БЮРО - это полноценная команда для решения всех ваших проблем в
-            части бухгалтерии, налогов, отчетности, кадров и не только. Вас не
-            обслуживает один человек, их минимум 4 на каждого клиента. И это
-            позволяет мыслить масштабнее, решать поставленные задачи
-            качественнее.
-          </p>
+          <SectionTitle>{blockTitle}</SectionTitle>
+          <p>{blockText}</p>
           <Button text="Бесплатная консультация" />
         </Text>
       </Container>

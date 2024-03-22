@@ -1,18 +1,12 @@
 import { ThemeProvider } from "styled-components";
 
 import { devices } from "@/constants";
+import { colors } from "@/constants";
 
 import { BaseTheme, ThemeProps } from "./interfaces";
 
 const baseTheme: BaseTheme = {
-  colors: {
-    primary: "#55ACA6",
-    secondary: "#C1A875",
-    primary_dark: "#39736f",
-    primary_light: "#AAD6D3",
-    yellow: "#FFFCF5",
-    white: "#ffffff",
-  },
+  colors,
   deviceQueries: {
     lg: `(max-width: ${devices.lg}px)`,
     md: `(max-width: ${devices.md}px)`,
@@ -21,6 +15,6 @@ const baseTheme: BaseTheme = {
   },
 };
 
-export const Theme = ({ children }: ThemeProps) => {
-  return <ThemeProvider theme={baseTheme}>{children}</ThemeProvider>;
-};
+export const Theme = ({ children }: ThemeProps) => (
+  <ThemeProvider theme={baseTheme}>{children}</ThemeProvider>
+);

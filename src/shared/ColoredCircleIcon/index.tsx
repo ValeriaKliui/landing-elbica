@@ -7,14 +7,12 @@ import { Circle, IconContainer } from "./styles";
 export const ColoredCircleIcon: FC<ColoredCircleIconProps> = ({
   Icon,
   link,
-}) => {
-  return (
-    <Link to={link}>
-      <Circle>
-        <IconContainer>
-          <Icon />
-        </IconContainer>
-      </Circle>
-    </Link>
-  );
-};
+}) => (
+  <Link to={link}>
+    <Circle>
+      <IconContainer>
+        <Icon />
+      </IconContainer>
+    </Circle>
+  </Link>
+);
