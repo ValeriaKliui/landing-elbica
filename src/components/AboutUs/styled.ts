@@ -11,7 +11,7 @@ export const Container = styled.div`
   }
 `;
 export const Text = styled.div`
-  flex-basis: 18%;
+  flex-basis: 48%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -20,7 +20,7 @@ export const Text = styled.div`
 export const SectionTitle = styled.h2`
   &::after {
     content: "";
-    background-color: ${(props) => props.theme.colors.secondary};
+    background-color: ${({ theme: { colors } }) => colors.secondary};
     width: 100%;
     height: 1px;
     display: block;
@@ -34,7 +34,7 @@ export const Links = styled.div`
     content: "";
     width: 1px;
     height: 25px;
-    background-color: ${(props) => props.theme.colors.secondary};
+    background-color: ${({ theme: { colors } }) => colors.secondary};
     display: inline-block;
     margin: 0 1em;
     position: relative;

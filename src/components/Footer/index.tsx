@@ -1,4 +1,4 @@
-import { FOOTER_DATA, FOOTER_LINKS } from "@/constants";
+import { FOOTER_DATA, FOOTER_LINKS, LINKS } from "@/constants";
 import { ContactIcons } from "@/shared/ContactIcons";
 import { Logo } from "@/shared/Logo";
 
@@ -12,7 +12,7 @@ import {
 
 export const Footer = () => {
   return (
-    <FooterContainer className="wrapper">
+    <FooterContainer className="wrapper" id={LINKS.CONTACTS}>
       <CompanyData>
         <Logo />
         <CompanyInfo>

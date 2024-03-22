@@ -8,17 +8,17 @@ export const Container = styled.div`
   border: 1px solid transparent;
   padding: 2em;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.5em;
   &:hover {
     box-shadow: none;
-    border: 1px solid ${(props) => props.theme.colors.secondary};
+    border: 1px solid ${({ theme: { colors } }) => colors.secondary};
   }
   @media ${({ theme: { deviceQueries } }) => deviceQueries.md} {
     padding: 1em;
   }
 `;
-export const Link = styled.a`
+export const LinkStyled = styled.a`
   align-self: flex-end;
   &::after {
     content: "→";

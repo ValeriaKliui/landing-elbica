@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import { ServiceCardProps } from "./interfaces";
-import { Container, Link } from "./styled";
+import { Container, LinkStyled } from "./styled";
 
 export const ServiceCard: FC<ServiceCardProps> = ({ title, text, Icon }) => {
   return (
@@ -9,7 +9,7 @@ export const ServiceCard: FC<ServiceCardProps> = ({ title, text, Icon }) => {
       <Icon />
       <h4>{title}</h4>
       <p>{text}</p>
-      <Link className="link">Подробнее</Link>
+      <LinkStyled className="link">Подробнее</LinkStyled>
     </Container>
   );
 };

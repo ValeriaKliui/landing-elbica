@@ -17,14 +17,32 @@ export const devices = {
   sm: 767,
   xs: 575,
 };
+export const PATHS = {
+  MAIN: {
+    TITLE: "Главная",
+    LINK: "/",
+  },
+  SERVICES: {
+    TITLE: "Услуги",
+    LINK: "/services",
+  },
+};
+
+export enum LINKS {
+  COMPANY = "company",
+  BENEFITS = "benefits",
+  OPPORTUNITIES = "opportunities",
+  FAQ = "faq",
+  CONTACTS = "contacts",
+}
 
 export const NAV_LINKS = [
-  { link: "", title: "О компании" },
-  { link: "", title: "Услуги" },
-  { link: "", title: "Команда" },
-  { link: "", title: "Отзывы" },
-  { link: "", title: "Статьи" },
-  { link: "", title: "Контакты" },
+  { link: "#" + LINKS.COMPANY, title: "О компании" },
+  { link: PATHS.SERVICES.LINK, title: "Услуги" },
+  { link: "#" + LINKS.BENEFITS, title: "Преимущества" },
+  { link: "#" + LINKS.OPPORTUNITIES, title: "Возможности" },
+  { link: "#" + LINKS.FAQ, title: "Вопросы" },
+  { link: "#" + LINKS.CONTACTS, title: "Контакты" },
 ];
 export const CONTACT_PHONE = 80293221586;
 
@@ -137,10 +155,10 @@ export const FAQItems = [
 
 export const FOOTER_LINKS = [
   [
-    { title: "О компании", link: "#" },
-    { title: "Услуги", link: "#" },
-    { title: "Команда", link: "#" },
-    { title: "Защита персональных данных", link: "#" },
+    { link: "#" + LINKS.COMPANY, title: "О компании" },
+    { link: PATHS.SERVICES.LINK, title: "Услуги" },
+    { link: "#" + LINKS.BENEFITS, title: "Преимущества" },
+    { link: "#" + LINKS.OPPORTUNITIES, title: "Возможности" },
   ],
   [
     { title: "Отзывы", link: "#" },

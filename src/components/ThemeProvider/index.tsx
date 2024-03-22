@@ -8,6 +8,7 @@ const baseTheme: BaseTheme = {
   colors: {
     primary: "#55ACA6",
     secondary: "#C1A875",
+    primary_dark: "#39736f",
     primary_light: "#AAD6D3",
     yellow: "#FFFCF5",
     white: "#ffffff",

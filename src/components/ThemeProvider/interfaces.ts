@@ -3,6 +3,7 @@ export type BaseTheme = {
     primary: string;
     secondary: string;
     primary_light: string;
+    primary_dark: string;
     yellow: string;
     white: string;
   };

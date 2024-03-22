@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { transition } from "@/shared";
+
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -32,8 +34,12 @@ export const Options = styled.div`
   }
 `;
 export const Option = styled.div`
+  ${transition()};
   border: 1px solid ${({ theme: { colors } }) => colors.secondary};
   border-radius: 3em;
   padding: 0.5em 1em;
   width: fit-content;
+  &:hover {
+    background-color: ${({ theme: { colors } }) => colors.secondary};
+  }
 `;

@@ -1,6 +1,6 @@
 import GirslImg from "@assets/images/girls.png";
 
-import { ADVANTAGES } from "@/constants";
+import { ADVANTAGES, LINKS } from "@/constants";
 import { DecoratedImg } from "@/shared/DecoratedImg";
 
 import {
@@ -15,7 +15,7 @@ import {
 
 export const Advantages = () => {
   return (
-    <Section className="section">
+    <Section className="section" id={LINKS.BENEFITS}>
       <div className="wrapper">
         <h2 className="section-title">Преимущества</h2>
         <Container>

@@ -7,7 +7,7 @@ export const LogoContainer = styled.div`
   align-items: flex-start;
 `;
 export const LogoText = styled.h1`
-  border-bottom: 1px solid ${(props) => props.theme.colors.secondary};
+  border-bottom: 1px solid ${({ theme: { colors } }) => colors.secondary};
   margin-bottom: 0.2em;
 `;
 export const Subtext = styled.p`

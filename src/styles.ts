@@ -36,8 +36,12 @@ export const GlobalStyle = styled.createGlobalStyle`
     color: inherit;
     cursor: pointer;
     &:hover {
-      color: ${(props) => props.theme.colors.secondary};
+      color: ${({ theme: { colors } }) => colors.secondary};
     }
+  }
+
+  .active {
+    color: ${({ theme: { colors } }) => colors.secondary};
   }
 
   ul {
@@ -59,7 +63,7 @@ export const GlobalStyle = styled.createGlobalStyle`
   }
 
   .link {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${({ theme: { colors } }) => colors.primary};
     font-weight: 700;
   }
 

@@ -24,7 +24,9 @@ export const CompanyData = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  grid-area: data;
+  @media ${({ theme: { deviceQueries } }) => deviceQueries.md} {
+    grid-area: data;
+  }
 `;
 export const CompanyInfo = styled.div`
   @media ${({ theme: { deviceQueries } }) => deviceQueries.md} {
