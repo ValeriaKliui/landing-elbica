@@ -1,6 +1,7 @@
+import { FC } from "react";
+
 import { AdvantageProps } from "./interfaces";
 import { Container, Point, PointsContainer, TitleContainer } from "./styled";
-import { FC } from "react";
 
 export const Advantage: FC<AdvantageProps> = ({ points, title }) => (
   <Container>
