@@ -16,7 +16,7 @@ export const CardsContainer = styled.div`
   }
   @media ${({ theme: { deviceQueries } }) => deviceQueries.xs} {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-auto-rows: 0;
   }
 `;

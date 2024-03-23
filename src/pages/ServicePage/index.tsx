@@ -1,9 +1,14 @@
 import GirlReadsDocs from "@/assets/images/girl-reads-docs.png";
+import { Advantage } from "@/components/Advantage";
 import { CardsSection } from "@/components/CardsSection";
 import { Consultation } from "@/components/Consultation";
+import { GridSection } from "@/components/GridSection";
+import { Guarantees } from "@/components/Guarantees";
 import { OpeningBlock } from "@/components/OpeningBlock";
 import { Price } from "@/components/Price";
-import { BENEFITS_OOO } from "@/constants";
+import { BENEFITS_OOO, PLUSES_IMG, PLUSES_INFO } from "@/constants";
+
+import { AdvantagesWrapper } from "./styled";
 
 export const ServicePage = () => (
   <>
@@ -13,7 +18,16 @@ export const ServicePage = () => (
       blockImgSrc={GirlReadsDocs}
     />
     <Price />
-    <Consultation />
+    <AdvantagesWrapper>
+      <GridSection
+        title="Плюсы бухгалтерии на аутсорсинге"
+        images={PLUSES_IMG}
+        infoItems={PLUSES_INFO}
+        Block={(props) => <Advantage {...props} />}
+      />
+    </AdvantagesWrapper>
     <CardsSection title="Что получает ООО?" items={BENEFITS_OOO} />
+    <Consultation />
+    <Guarantees />
   </>
 );

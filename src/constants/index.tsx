@@ -8,8 +8,10 @@ import MaintenanceIPImg from "@assets/icons/maintenanceIP.svg?react";
 import RecreationImg from "@assets/icons/recreation.svg?react";
 import RegistrationImg from "@assets/icons/registration.svg?react";
 import GirlReadsImg from "@assets/images/girl-reads.png";
+import HappyGirlImg from "@assets/images/happy-girl-docs.png";
 import LaptopImg from "@assets/images/laptop.png";
 import PapersImg from "@assets/images/papers.png";
+import SmilingGirlImg from "@assets/images/smiling-girl.png";
 
 export const colors = {
   primary: "#55ACA6",
@@ -111,23 +113,22 @@ export const SERVICES = [
   },
 ];
 
+export const OPPORTUNITIES_IMG = [GirlReadsImg, PapersImg, LaptopImg];
+
 export const OPPORTUNITIES = [
   {
     title: "Отчеты и налоги",
     text: "Наши сотрудники постоянно участвуют в профильных семинарах и повышаю квалификацию. У нас работают одни из лучших специалистов в своих областях. У нас работают одни из лучших специалистов.",
-    img: GirlReadsImg,
     options: ["Документы", "Отчеты", "ФНС", "ПФР", "ФСС"],
   },
   {
     title: "Документы и оплаты",
     text: "Наши сотрудники постоянно участвуют в профильных семинарах и повышаю квалификацию. У нас работают одни из лучших специалистов в своих областях. У нас работают одни из лучших специалистов.",
-    img: PapersImg,
     options: ["Документы", "Отчеты", "ФНС", "ПФР", "ФСС"],
   },
   {
     title: "Годовые отчеты",
     text: "Наши сотрудники постоянно участвуют в профильных семинарах и повышаю квалификацию. У нас работают одни из лучших специалистов в своих областях. У нас работают одни из лучших специалистов.",
-    img: LaptopImg,
     options: ["Документы", "Отчеты", "ФНС", "ПФР", "ФСС"],
   },
 ];
@@ -238,5 +239,28 @@ export const BENEFITS_OOO = [
     text: "Проснувшись однажды утром после беспокойного сна, он обнаружил, что он у себя в постели превратился в страшное насекомое.",
     link: "#",
     Icon: RegistrationImg,
+  },
+];
+
+export const PLUSES_IMG = [HappyGirlImg, SmilingGirlImg];
+export const PLUSES_INFO = [
+  {
+    title: "Вам НЕ НУЖНО будет:",
+    points: [
+      "Платить зарплату бухгалтеру и налоги с нее",
+      "Организовывать рабочее место для бухгалтера",
+      "Тратиться на программное обеспечение и постоянное его обновление",
+      "Отслеживать и оплачивать курсы повышения квалификации своего бухгалтера",
+      "Оплачивать нерабочее время своего бухгалтера - никаких больничных и отпусков – наши бухгалтеры всегда заменят друг друга.",
+    ],
+  },
+  {
+    title: "У вас появится ВОЗМОЖНОСТЬ",
+    points: [
+      "Переложить свою ответственность на нас",
+      "Получать действительно отличных, мотивированных на качественную работу специалистов",
+      "Оптимизировать расходы на бухучет",
+      "Моментально получать консультационную и экспертную поддержку по вопросам широкого спектра.",
+    ],
   },
 ];

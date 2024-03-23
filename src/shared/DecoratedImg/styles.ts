@@ -10,10 +10,12 @@ export const Container = styled.div<{
 
 export const Border = styled.div<{
   $top: number;
+  $maxWidth: number;
 }>`
   border: 1px solid ${({ theme: { colors } }) => colors.secondary};
   margin-top: ${({ $top }) => $top / 2}px;
   position: relative;
+  width: fit-content;
 `;
 
 export const Image = styled.img<{
@@ -30,4 +32,5 @@ export const Image = styled.img<{
       $isCascade ? -1.3 * $left : 1.3 * $left}px
     ${({ $top }) => -1.3 * $top}px
     ${({ theme: { colors } }) => colors.primary_light};
+  z-index: -1;
 `;

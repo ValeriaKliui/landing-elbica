@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   background-color: ${({ theme: { colors } }) => colors.yellow};
+  z-index: 0;
+  position: relative;
 `;
 export const Container = styled.div`
   display: flex;

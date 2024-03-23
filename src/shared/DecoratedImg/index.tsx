@@ -24,7 +24,7 @@ export const DecoratedImg: FC<DecoratedImgProps> = ({
 
   return (
     <Container $top={imgTop} $left={imgLeft}>
-      <Border $top={imgTop}>
+      <Border $top={imgTop} $maxWidth={imgWidth}>
         <Image
           src={src}
           ref={imgRef}

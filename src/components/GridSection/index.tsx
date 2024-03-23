@@ -1,24 +1,34 @@
-import classNames from "classnames";
+import { FC } from "react";
 
-import { OPPORTUNITIES } from "@/constants";
+import { DecoratedImg } from "@/shared/DecoratedImg";
 
-import { Opportunity } from "./Opportunity";
-import { Container } from "./styled";
+import { GridSectionProps } from "./interfaces";
+import { Container, GridCell } from "./styled";
 
-export const GridSection = ({ title, id }) => (
-  <section className={classNames("section", "wrapper-s")} id={id}>
-    <h2 className="section-title">{title}</h2>
-    <Container>
-      {OPPORTUNITIES.map(({ title, text, options, img }, index) => (
-        <Opportunity
-          title={title}
-          text={text}
-          options={options}
-          img={img}
-          key={title}
-          index={index}
-        />
-      ))}
-    </Container>
-  </section>
-);
+export const GridSection: FC<GridSectionProps<any>> = ({
+  title,
+  id,
+  images,
+  infoItems,
+  Block,
+}) => {
+  return (
+    <section className="section" id={id}>
+      <div className="wrapper-s">
+        <h2 className="section-title">{title}</h2>
+        <Container>
+          {infoItems.map((item, index) => (
+            <>
+              <GridCell>
+                <DecoratedImg src={images[index]} />
+              </GridCell>
+              <GridCell>
+                <Block {...item} />
+              </GridCell>
+            </>
+          ))}
+        </Container>
+      </div>
+    </section>
+  );
+};

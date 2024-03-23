@@ -8,7 +8,9 @@ import { FAQ } from "@/components/FAQ";
 import { GridSection } from "@/components/GridSection";
 import { Guarantees } from "@/components/Guarantees";
 import { OpeningBlock } from "@/components/OpeningBlock";
-import { LINKS, SERVICES } from "@/constants";
+import { Opportunity } from "@/components/OpportunityText";
+import { OpportunityProps } from "@/components/OpportunityText/interfaces";
+import { LINKS, OPPORTUNITIES, OPPORTUNITIES_IMG, SERVICES } from "@/constants";
 
 export const MainPage = () => (
   <>
@@ -23,7 +25,13 @@ export const MainPage = () => (
     />
     <CardsSection title="Каталог услуг" items={SERVICES} />
     <Advantages />
-    <GridSection title="Наши возможности" id={LINKS.OPPORTUNITIES} />
+    <GridSection
+      title="Наши возможности"
+      id={LINKS.OPPORTUNITIES}
+      images={OPPORTUNITIES_IMG}
+      infoItems={OPPORTUNITIES}
+      Block={(props: OpportunityProps) => <Opportunity {...props} />}
+    />
     <ContactForm />
     <FAQ />
     <Consultation />
